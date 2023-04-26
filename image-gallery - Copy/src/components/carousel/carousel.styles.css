@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+  color: var(--cian-oscuro);
+}
+
+.slider .btnClose,
+.slider .btnNext,
+.slider .btnPrev {
+  position: fixed;
+  cursor: pointer;
+  opacity: 0.6;
+  color: #fff;
+  z-index: 999999;
+}
+
+.btnClose:hover,
+.btnNext:hover,
+.btnPrev:hover {
+  opacity: 1;
+  transform: scale(1.5);
+}
+.slider .btnClose {
+  top: 40px;
+  right: 40px;
+}
+
+.slider .btnNext {
+  top: 40%;
+  transform: translateY(-50%);
+  right: 40px;
+}
+
+.slider .btnPrev {
+  top: 40%;
+  transform: translateY(-50%);
+  left: 40px;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 10px;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+
+.fullScreenImage {
+  width: calc(100%-40px);
+  height: calc(100%-40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullScreenImage img {
+  max-width: 30%;
+  max-height: 30%;
+  pointer-events: none;
+  user-select: none;
+}
